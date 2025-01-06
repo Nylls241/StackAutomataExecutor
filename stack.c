@@ -38,12 +38,12 @@ bool isFull() {
 /**
  * @brief Pushes a value onto the stack.
  * 
- * Adds a new integer value to the top of the stack.
+ * Adds a new char value to the top of the stack.
  * 
- * @param value The integer value to push onto the stack.
+ * @param value The char value to push onto the stack.
  * @note If the stack is full, an error message is displayed and the operation is aborted.
  */
-void push(int value) {
+void push(char value) {
     if (isFull()) {
         printf("Error: Stack is full.\n");
         return;
@@ -56,7 +56,7 @@ void push(int value) {
  * 
  * Removes and returns the value at the top of the stack.
  * 
- * @return The integer value removed from the stack. If the stack is empty, an error message is displayed and `-1` is returned.
+ * @return The char value removed from the stack. If the stack is empty, an error message is displayed and `-1` is returned.
  * @note The bottom of the stack (character `#`) cannot be removed.
  */
 int pop() {

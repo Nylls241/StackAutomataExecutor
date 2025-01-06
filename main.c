@@ -34,10 +34,10 @@ int main() {
     }
 
     // Push some values onto the stack
-    printf("Pushing values 10, 20, and 30 onto the stack...\n");
+    printf("Pushing values 'C', 20, and 'aaa' onto the stack...\n");
     push(10);
-    push(20);
-    push(30);
+    push('20');
+    push('aaa');
 
     // Check if the stack is empty
     if (isEmpty()) {
@@ -49,11 +49,11 @@ int main() {
     // Pop values from the stack
     printf("Popping values from the stack...\n");
     int value = pop();
-    printf("Popped value: %d\n", value);
+    printf("Popped value: %c\n", value);
     value = pop();
-    printf("Popped value: %d\n", value);
+    printf("Popped value: %c\n", value);
     value = pop();
-    printf("Popped value: %d\n", value);
+    printf("Popped value: %c\n", value);
 
     // Attempt to pop from an empty stack
     printf("Attempting to pop from an empty stack...\n");
