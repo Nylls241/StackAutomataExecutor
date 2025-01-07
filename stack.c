@@ -2,7 +2,6 @@
 #include "stack.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 static int stack[MAX_SIZE]; /**< Static array to store stack elements. */
 static int top = -1;        /**< Index of the top of the stack (initially empty). */
@@ -67,3 +66,15 @@ int pop() {
     return stack[top--]; /**< Return the top value and decrement `top`. */
 }
 
+/**
+ * @brief Reads the value at the top of the stack without removing it.
+ * 
+ * @return The char value at the top of the stack. If the stack is empty, an error message is displayed and `-1` is returned.
+ */
+int read_top() {
+    if (isEmpty()) {
+        printf("Error: Stack is empty.\n");
+        return -1; /**< Error: Attempting to read from an empty stack. */
+    }
+    return stack[top]; /**< Return the value at the current top index without modifying it. */
+}
