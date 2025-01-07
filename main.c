@@ -17,6 +17,7 @@
  * - Checking if the stack is empty.
  * - Pushing values onto the stack.
  * - Popping values from the stack.
+ * - Reading the top value of the stack.
  * - Handling edge cases like popping from an empty stack.
  * 
  * @return Returns 0 if the program executes successfully.
@@ -34,10 +35,17 @@ int main() {
     }
 
     // Push some values onto the stack
-    printf("Pushing values 'c', 0, and 'a' onto the stack...\n");
+    printf("Pushing values 'c', '0', and 'a' onto the stack...\n");
     push('c');
     push('0');
     push('a');
+
+    // Read the top value without popping
+    printf("Reading the top value of the stack without removing it...\n");
+    char topValue = read_top();
+    if (topValue != -1) {
+        printf("Top value of the stack: %c\n", topValue);
+    }
 
     // Check if the stack is empty
     if (isEmpty()) {
@@ -60,6 +68,13 @@ int main() {
     value = pop();
     if (value == -1) {
         printf("Error handled: Cannot pop from an empty stack.\n");
+    }
+
+    // Attempt to read from an empty stack
+    printf("Attempting to read the top value of an empty stack...\n");
+    topValue = read_top();
+    if (topValue == -1) {
+        printf("Error handled: Cannot read from an empty stack.\n");
     }
 
     // Final empty check

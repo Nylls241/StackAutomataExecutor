@@ -43,4 +43,12 @@ void push(char value);
  */
 int pop();
 
+/**
+ * @brief Reads the top value of the stack without removing it.
+ * 
+ * @return The integer value currently at the top of the stack.
+ * @note Ensure the stack is not empty by using `isEmpty()` before calling this function.
+ */
+int read_top();
+
 #endif // STACK_H
