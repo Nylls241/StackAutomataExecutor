@@ -30,10 +30,10 @@ bool isFull();
 /**
  * @brief Pushes a value onto the stack.
  * 
- * @param value The integer value to be pushed onto the stack.
+ * @param value The char value to be pushed onto the stack.
  * @note Ensure the stack is not full by using `isFull()` before calling this function.
  */
-void push(int value);
+void push(char value);
 
 /**
  * @brief Pops the top value off the stack.
