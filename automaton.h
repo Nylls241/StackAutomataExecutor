@@ -20,9 +20,7 @@ typedef struct {
     bool accepting_states[MAX_TRANSITIONS];
     Transition transitions[MAX_TRANSITIONS];
     int num_transitions;
+    int initial_state; // Add initial state
 } Automaton;
-
-// Function to parse the automaton file
-Automaton parse_automaton_file(const char* filename);
 
 #endif // AUTOMATON_H
