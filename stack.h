@@ -49,6 +49,6 @@ int pop();
  * @return The integer value currently at the top of the stack.
  * @note Ensure the stack is not empty by using `isEmpty()` before calling this function.
  */
-int read_top();
+int peek();
 
 #endif // STACK_H

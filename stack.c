@@ -71,7 +71,7 @@ int pop() {
  * 
  * @return The char value at the top of the stack. If the stack is empty, an error message is displayed and `-1` is returned.
  */
-int read_top() {
+int peek() {
     if (isEmpty()) {
         printf("Error: Stack is empty.\n");
         return -1; /**< Error: Attempting to read from an empty stack. */

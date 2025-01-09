@@ -9,24 +9,24 @@ void test_stack() {
     // Initialize stack
     initStack();
     assert(isEmpty() == false); // Stack is initialized with `#`, so it's not empty.
-    assert(read_top() == '#');
+    assert(peek() == '#');
 
     // Push elements onto the stack
     push('a');
     push('b');
     push('c');
     assert(isEmpty() == false);
-    assert(read_top() == 'c'); // Top should be 'c'
+    assert(peek() == 'c'); // Top should be 'c'
 
     // Pop elements from the stack
     assert(pop() == 'c');
-    assert(read_top() == 'b');
+    assert(peek() == 'b');
     assert(pop() == 'b');
-    assert(read_top() == 'a');
+    assert(peek() == 'a');
 
     // Pop to bottom
     assert(pop() == 'a');
-    assert(read_top() == '#');
+    assert(peek() == '#');
 
     // Attempt to pop beyond the bottom
     //assert(pop() == -1); // Error: Stack is empty
