@@ -1,32 +1,24 @@
-# Compiler
-CC = gcc
+# Makefile for LRanalyzer Project
+# Author: Nylls Boutoto, 2025
 
-# Compiler flags
-CFLAGS = -Wall -Wextra -std=c11
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Wextra
 
 # Target executable
-TARGET = AP
+TARGET = LRanalyzer
 
 # Source files
-SRCS = stack.c automaton.c main.c
+SRC = *.c
 
-# Object files
-OBJS = $(SRCS:.c=.o)
-
-# Default target
+# Default rule
 all: $(TARGET)
 
-# Build target
-$(TARGET): $(OBJS)
-    $(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+$(TARGET):
+	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
-# Compile source files into object files
-%.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
-
-# Clean up build files
+# Clean rule
 clean:
-    rm -f $(TARGET) $(OBJS)
+	rm -f $(TARGET)
 
-# Phony targets
-.PHONY: all Clean
+.PHONY: all clean
