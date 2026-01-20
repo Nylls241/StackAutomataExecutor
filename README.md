@@ -1,7 +1,4 @@
-# LR Analyzer – Compilation Project 2026
-
-**Author:** Nylls Boutoto  
-**Year:** 2026
+# LR Analyzer – Compilation Project 
 
 ## Description
 
